@@ -1,3 +1,3 @@
 # songhli
-Projet d'intégration continue
+Projet d'intégration continu
 
