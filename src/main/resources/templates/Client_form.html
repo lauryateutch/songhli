@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+    <head>
+<meta charset="UTP-8">
+<title> Veuillez vous enregistrer</title>
+<link th:href="@{/ css/clientStyle.css}"  rel="stylesheet">
+       <!-- <link  th:href="@{/css/Style.css}"  rel="stylesheet" type="text/css">-->
+    </head>
+    <body>
+
+    <header>
+
+        <div class="main">
+
+            <ul>
+                <li class="active"> <a href="#"> Home</a> </li>
+                <li> <a href="#"> Services</a> </li>
+                <li> <a href="#"> About</a> </li>
+                <li> <a href="#"> Contact</a> </li>
+                <li> <a href="#"> Se Connecter</a> </li>
+            </ul>
+        </div>
+    </header>
+
+    <form enctype="multipart/form-data" action="#" method="post" th:action="@{/client/register}" th:object="${client}">
+        <div class="wrapper">
+
+            <div class="client-form">
+              <div class="input-fields">
+
+                 <input name="firstName" th:field="*{firstName}" type="text" class="input" placeholder="FirstName">
+                 <input name="lastName" th:field="*{lastName}" type="text" class="input" placeholder="LastName">
+                 <input name="profession" th:field="*{profession}" type="text" class="input" placeholder="Profession">
+                 <input name="address" th:field="*{address}" type="text" class="input" placeholder="Address">
+                 <input name="phoneNumber" th:field="*{phoneNumber}" type="text" class="input" placeholder="phoneNumber">
+                  <input name="email" th:field="*{email}" type="text" class="input" placeholder="Email">
+                  <input type="file" name="cni" class="input" placeholder="cni">
+                  <input type="file" name="location" class="input" placeholder="location">
+                  <input type = "file" name="photo" class="input" placeholder="photo">
+                  <input name="birthday" th:field="*{birthday}" type="date" class="input" placeholder="birthday">
+
+
+              </div>
+             <div class="msg">
+
+                <br>
+             <button class="btn"  value="Upload">   Send </button>
+                  <!--<div class="btn"> Send</div>-->
+
+              </div>
+            </div>
+        </div>
+    </form>
+
+    </body>
+</html>
